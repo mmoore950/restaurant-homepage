@@ -24,6 +24,23 @@ module.exports = {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
+      {
+        test: /\.(woff(2)?|ttf|eot|otf)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name][ext]',
+        },
+        include: [
+          path.resolve(__dirname, 'src/fonts')
+        ]
+      }, 
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: 'images/[name][ext]', // Outputs images to 'dist/images/' folder
+        }
+      },
     ],
   },
 };
