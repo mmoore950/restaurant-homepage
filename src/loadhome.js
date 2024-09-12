@@ -2,7 +2,15 @@ import biscoffCake from "./images/biscoff-cake.jpeg";
 import lemonCake from "./images/lemon-cake.jpg";
 
 export function loadhome() {
-    const content = document.getElementById('content');
+    let content;
+
+    if (document.getElementById('menu-content')) {
+        content = document.getElementById('menu-content'); // If 'menu-content' exists
+    } else {
+        content = document.getElementById('content'); // If 'menu-content' doesn't exist
+    }
+    content.innerHTML = ''
+    content.id = 'content'
 
     // Create and append the welcome header
     const welcomeHeader = document.createElement('h1');

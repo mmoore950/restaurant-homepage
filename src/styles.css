@@ -42,6 +42,15 @@ nav {
     height: 100%;
 }
 
+nav button {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+nav button:hover {
+    transform: translateY(-5px);
+}
+
 header {
     overflow: visible;
     position: sticky;
@@ -64,10 +73,11 @@ div#content {
     align-items: center;
     background-color: rgb(236, 90, 139);
     width: 50vw;
-    height: 130vh;
+    height: 120vh;
     align-self: center;
     padding: 50px;
     box-shadow: 10px 10px 5px;
+    margin-bottom: 50px;
 }
 
 p#about {
@@ -195,4 +205,53 @@ h1.location {
     height: 15vw;
     width: 15vw;
     box-shadow: 5px 5px 5px;
+}
+
+#menu-content {
+    display: grid;
+    grid: repeat(3, 1fr) / 1fr 1fr;
+    height: 125vh;
+    width: 55vw;
+    box-shadow: 10px 10px 5px;
+    background-color: rgb(236, 90, 139);
+    margin-bottom: 40px;
+    padding:15px;
+    gap: 10px;
+    place-items: center;
+}
+
+#biscoff-menu, #lemon-menu,
+#cheese-menu {
+    background-color: rgb(236, 220, 220);
+    box-shadow: 7px 7px 5px;
+    border-radius: 8px;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat';
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+#cheesecake-img-menu,
+#biscoff-img-menu,
+#lemon-img-menu {
+    height: 36vh;
+    width: 25vw;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px;
+}
+
+#biscoff-menu h1, #lemon-menu h1,
+#cheese-menu h1 {
+    font-family: 'lemon-italic-bold';
+    margin: 10px;
+    font-size: 4vh;
+}
+
+#biscoff-menu p, #lemon-menu p,
+#cheese-menu p {
+    margin: 10px;
+    font-size: 2vh;
 }
